@@ -1,5 +1,7 @@
 package com.clouddrive.user.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +35,11 @@ public class UserServiceImpl implements UserService {
 	public String deleteUserById(String userId) {
 		userRepository.deleteById(userId);
 		return userId;
+	}
+
+	@Override
+	public List<User> listAllUser() {
+		return userRepository.findAll();
 	}
 
 }

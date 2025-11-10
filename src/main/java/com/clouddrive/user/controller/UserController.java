@@ -1,5 +1,7 @@
 package com.clouddrive.user.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -42,4 +44,10 @@ public class UserController {
 		userService.deleteUserById(userId);
 		return "User deleted of Id - "+userId;
 	}
+	
+	@GetMapping("/list")
+	public List<User> listAllUser(){
+		return userService.listAllUser();
+	}
+	
 }

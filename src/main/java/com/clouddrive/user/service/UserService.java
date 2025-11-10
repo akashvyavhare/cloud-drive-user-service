@@ -1,5 +1,7 @@
 package com.clouddrive.user.service;
 
+import java.util.List;
+
 import com.clouddrive.user.model.User;
 
 public interface UserService {
@@ -12,4 +14,5 @@ public interface UserService {
 	
 	public String deleteUserById(String userId);
 
+	public List<User> listAllUser();
 }
